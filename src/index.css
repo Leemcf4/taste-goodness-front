@@ -35,4 +35,76 @@ code {
   -webkit-box-shadow: 0px 10px 5px -5px rgba(0,0,0,0.41);
   -moz-box-shadow: 0px 10px 5px -5px rgba(0,0,0,0.41);
   box-shadow: 0px 10px 5px -5px rgba(0,0,0,0.41);
+  justify-content: center;
+  align-items: center;
 }
+
+.nav-items{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 1248px) {
+  .nav-items{
+    display: none;
+  }
+}
+
+.nav-item{
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+  font-size: 3rem;
+  font-family:'PT Sans Narrow', sans-serif ;
+  justify-content: space-around;
+  margin: 3rem;
+  flex-shrink: inherit;
+  letter-spacing: 1px;
+  
+
+}
+.nav-item>span{
+  color: #faaf4c;
+}
+
+.mobile-header{
+  display: none;
+  margin-right: auto;
+
+  left: 0;
+  color: aliceblue;
+}
+
+@media only screen and (max-width: 1248px) {
+  .mobile-header{
+    display: flex;
+  }
+}
+
+.home-container{
+
+  display: flex;
+  
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1500px;
+  justify-content: center;
+
+}
+
+.home-container>img{
+
+  display: flex;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  
+
+}
+
