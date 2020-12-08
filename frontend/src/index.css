@@ -101,8 +101,7 @@ code {
 }
 
 .footer-container {
-  display: flex;
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
   margin-bottom: -14px;
@@ -144,4 +143,48 @@ code {
 
     margin-bottom: 10px;
   }
+}
+
+.footer-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: -14px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  -webkit-animation: myAnim 0.5s alternate;
+  /*-webkit-animation-delay: 2s;*/
+  animation: myAnim 0.5s alternate;
+  /*animation-delay: 2s;*/
+}
+
+@-webkit-keyframes myAnim {
+  100% {
+    left: 0px;
+    bottom: 0;
+  }
+}
+
+@keyframes myAnim {
+  100% {
+    left: -1920px;
+    bottom: 0;
+  }
+}
+
+.product-details {
+  display: flex;
+  position: absolute;
+  top: 40px;
+  z-index: -100;
+  left: 10%;
+  right: 25%;
+}
+.product-details > img {
+  width: 100%;
+  min-width: 250px;
+  max-width: 675px;
+  height: auto;
+  object-fit: contain;
 }

@@ -4,10 +4,7 @@ function WhereToFind() {
   return (
     <div>
       <h1>Find us</h1>
-      <div className="yo">
-        asdfasdf
-        <h2></h2>
-      </div>
+      <div className="yo">asdfasdf</div>
     </div>
   );
 }
