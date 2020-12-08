@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import ProductDetails from "../components/ProductDetails";
+import ProductRow from "../components/ProductRow";
 
 const products = [
   {
@@ -105,17 +106,40 @@ const products = [
 ];
 
 function OurFamily() {
+  const [productSelected, setProductSelected] = useState(false);
+  const [productShow, setProductShow] = useState(0);
   return (
     <div className="family-container">
       <div className="family-top"></div>
 
-      <ProductDetails
-        productImage={products.productImage}
-        productDetailsImage={products.productDetails}
-        productDetailsCloud={products.productCloud}
-      />
+      {productSelected ? (
+        <ProductDetails
+          key={products._id}
+          productImage={products.productImage}
+          productDetailsImage={products.productDetails}
+          productDetailsCloud={products.productCloud}
+        />
+      ) : (
+        <div className="family-top">
+          <div className="family-title">
+            <img src="/images/family_title.png" alt="" />
+          </div>
+          <div className="family-board">
+            <img src="/images/family_textboard.png" alt="" />
+          </div>
+        </div>
+      )}
       <div className="family-bottom">
-        <div className="product-row">{/*product row*/}</div>
+        <div className="product-row">
+          {products.map((product) => (
+            <ProductRow
+              setProductSelected={setProductSelected}
+              position={product.position}
+              rowImage={product.productFamilyImage}
+              label={product.productLabel}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

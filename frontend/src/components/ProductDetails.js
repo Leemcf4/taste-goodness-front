@@ -1,12 +1,13 @@
 import React from "react";
 
 function ProductDetails({
+  key,
   productImage,
   productDetailsImage,
   productDetailsCloud,
 }) {
   return (
-    <div className="product-details-container">
+    <div key={key} className="product-details-container">
       <div className="product-image">
         <img src="/images/piri_bottle.png" alt="" />
       </div>

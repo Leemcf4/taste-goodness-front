@@ -1,6 +1,6 @@
 import React from "react";
 
-function ProductRow(position, rowImage, label) {
+function ProductRow(position, rowImage, label, setProductSelected) {
   return (
     <div className="product-row-container">
       <div className={`product-position ${position}`}>
@@ -8,7 +8,13 @@ function ProductRow(position, rowImage, label) {
           <img src={label} alt="" />
         </div>
         <div className="details-image">
-          <img src={rowImage} alt="" onClick="" />
+          <img
+            src={rowImage}
+            alt=""
+            onClick={() => {
+              setProductSelected(true);
+            }}
+          />
         </div>
       </div>
     </div>
