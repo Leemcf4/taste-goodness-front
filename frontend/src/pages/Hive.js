@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
 
 function Hive() {
-    return (
-        <div>
-            <h1>Hive</h1>
-        </div>
-    )
+  return (
+    <div className="hive-container">
+      <div className="hive-title">
+        <img src="/images/hive_title.png" alt="" />
+      </div>
+      <div className="hive-book">
+        <img src="/images/hive_book.png" alt="" />
+      </div>
+    </div>
+  );
 }
 
-export default Hive
+export default Hive;

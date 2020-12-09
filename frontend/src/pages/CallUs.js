@@ -1,13 +1,21 @@
-import React from 'react'
+import React from "react";
 
 function CallUs() {
-    return (
-        <div>
+  return (
+    <div className="call-container">
+      <div className="call-title">
+        <img src="/images/callme_title.png" alt="" />
+      </div>
 
-            <h1>Call us</h1>
-            
-        </div>
-    )
+      <div className="call-text-left">
+        <img src="/images/callus_textboard1.png" alt="" />
+      </div>
+
+      <div className="call-text-right">
+        <img src="/images/callus_textboard2.png" alt="" />
+      </div>
+    </div>
+  );
 }
 
-export default CallUs
+export default CallUs;
