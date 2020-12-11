@@ -300,3 +300,7 @@ code {
     max-height: 300px;
   }
 }
+
+.product-row {
+  display: flex;
+}

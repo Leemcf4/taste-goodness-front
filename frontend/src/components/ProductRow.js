@@ -1,20 +1,19 @@
 import React from "react";
+import { Link, Route } from "react-router-dom";
 
-function ProductRow(position, rowImage, label, setProductSelected) {
+function ProductRow(props) {
+  const { product, clickHandler } = props;
   return (
-    <div className="product-row-container">
-      <div className={`product-position ${position}`}>
+    <div key={product._id} className="product-row-container">
+      <div className={`product-position ${product.position}`}>
         <div className="label">
-          <img src={label} alt="" />
+          <img src={product.productLabel} alt="" />
         </div>
-        <div className="details-image">
-          <img
-            src={rowImage}
-            alt=""
-            onClick={() => {
-              setProductSelected(true);
-            }}
-          />
+        <div
+          className="details-image"
+          onClick={() => clickHandler(product._id)}
+        >
+          <img src={product.productFamilyImage} alt="" />
         </div>
       </div>
     </div>

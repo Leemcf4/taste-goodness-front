@@ -1,4 +1,4 @@
-.App{
+.App {
   position: fixed;
   top: 0;
   left: 0;
@@ -6,9 +6,29 @@
   height: 100%;
   z-index: -100;
 
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #90C1FC), color-stop(0.33, #A3D5FE), color-stop(0.66, #B0DEFD), color-stop(1, #C1E8FE));
-  background-image: -webkit-linear-gradient(top, #90C1FC 0%, #A3D5FE 33%, #B0DEFD 66%, #C1E8FE 100%);
-  background-image: linear-gradient(to bottom, #90C1FC 0%, #A3D5FE 33%, #B0DEFD 66%, #C1E8FE 100%);
-  
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #90c1fc),
+    color-stop(0.33, #a3d5fe),
+    color-stop(0.66, #b0defd),
+    color-stop(1, #c1e8fe)
+  );
+  background-image: -webkit-linear-gradient(
+    top,
+    #90c1fc 0%,
+    #a3d5fe 33%,
+    #b0defd 66%,
+    #c1e8fe 100%
+  );
+  background-image: linear-gradient(
+    to bottom,
+    #90c1fc 0%,
+    #a3d5fe 33%,
+    #b0defd 66%,
+    #c1e8fe 100%
+  );
 
+  overflow: scroll;
 }

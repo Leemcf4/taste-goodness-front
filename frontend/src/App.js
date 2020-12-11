@@ -9,6 +9,7 @@ import WhereToFind from "./pages/WhereToFind";
 import Hive from "./pages/Hive";
 import CallUs from "./pages/CallUs";
 import OurFamily from "./pages/OurFamily";
+import ProductDetails from "./components/ProductDetails";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         </header>
 
         <main>
+          <Route path="/productdetails/:id" component={ProductDetails}></Route>
           <Route path="/ourstory" component={StoryPage}></Route>
           <Route path="/whatsgood" component={WhatsGood}></Route>
           <Route path="/ourfamily" component={OurFamily}></Route>

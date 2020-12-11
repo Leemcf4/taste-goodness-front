@@ -10,7 +10,7 @@ const products = [
     productFamilyImage: "/images/family_bottle_cajun.png",
     productLabel: "/images/label_cajun.png",
     productDetails: "",
-    productDetailsImage: "",
+    productDetailsImage: "/images/piri_bottle.png",
     productCloud: "",
   },
   {
@@ -90,7 +90,7 @@ const products = [
     productFamilyImage: "/images/family_bottle_secret.png",
     productLabel: "/images/label_secret.png",
     productDetails: "/images/secret_textboard_full.png",
-    productDetailsImage: "",
+    productDetailsImage: "/images/piri_bottle.png",
     productCloud: "",
   },
   {
@@ -100,43 +100,163 @@ const products = [
     productFamilyImage: "/images/family_bottle_tikka.png",
     productLabel: "/images/label_tikka.png",
     productDetails: "",
-    productDetailsImage: "",
+    productDetailsImage: "/images/piri_bottle.png",
     productCloud: "",
   },
 ];
 
 function OurFamily() {
-  const [productSelected, setProductSelected] = useState(false);
   const [productShow, setProductShow] = useState(0);
+
+  const clickHandler = (productID) => {
+    setProductShow(productID);
+    console.log(productShow);
+  };
+
   return (
     <div className="family-container">
-      <div className="family-top"></div>
-
-      {productSelected ? (
-        <ProductDetails
-          key={products._id}
-          productImage={products.productImage}
-          productDetailsImage={products.productDetails}
-          productDetailsCloud={products.productCloud}
-        />
-      ) : (
-        <div className="family-top">
-          <div className="family-title">
-            <img src="/images/family_title.png" alt="" />
+      {productShow === 1 ? (
+        <div className="product-details-container">
+          <div className="product-image">
+            <img src="/images/piri_bottle.png" alt="" />
           </div>
-          <div className="family-board">
-            <img src="/images/family_textboard.png" alt="" />
+          <div className="product-details">
+            <img src="/images/piri_bottle.png" alt="" />
+          </div>
+          <div className="product-details-cloud">
+            <img src="/images/piri_bottle.png" alt="" />
           </div>
         </div>
+      ) : productShow === 2 ? (
+        <div className="product-details-container">
+          <div className="product-image">
+            <img src="/images/piri_bottle.png" alt="" />
+          </div>
+          <div className="product-details">
+            <img src="/images/piri_textboard_full.png" alt="" />
+          </div>
+          <div className="product-details-cloud">
+            <img src="/images/piri_cloud.png" alt="" />
+          </div>
+        </div>
+      ) : productShow === 3 ? (
+        <div className="product-details-container">
+          <div className="product-image">
+            <img src="/images/garlic_bottle.png" alt="" />
+          </div>
+          <div className="product-details">
+            <img src="/images/garlic_textboard_full.png" alt="" />
+          </div>
+          <div className="product-details-cloud">
+            <img src="/images/garlic_cloud.png" alt="" />
+          </div>
+        </div>
+      ) : productShow === 4 ? (
+        <div className="product-details-container">
+          <div className="product-image">
+            <img src="/images/southwest_bottle.png" alt="" />
+          </div>
+          <div className="product-details">
+            <img src="/images/southwest_textboard_full.png" alt="" />
+          </div>
+          <div className="product-details-cloud">
+            <img src="/images/southwest_cloud.png" alt="" />
+          </div>
+        </div>
+      ) : productShow === 5 ? (
+        <div className="product-details-container">
+          <div className="product-image">
+            <img src="/images/sweet_bottle.png" alt="" />
+          </div>
+          <div className="product-details">
+            <img src="/images/sweet_textboard_full.png" alt="" />
+          </div>
+          <div className="product-details-cloud">
+            <img src="/images/sweet_cloud.png" alt="" />
+          </div>
+        </div>
+      ) : productShow === 6 ? (
+        <div className="product-details-container">
+          <div className="product-image">
+            <img src="/images/bbq_bottle.png" alt="" />
+          </div>
+          <div className="product-details">
+            <img src="/images/bbq_textboard_full.png" alt="" />
+          </div>
+          <div className="product-details-cloud">
+            <img src="/images/bbq_cloud.png" alt="" />
+          </div>
+        </div>
+      ) : productShow === 7 ? (
+        <div className="product-details-container">
+          <div className="product-image">
+            <img src="/images/taco_bottle.png" alt="" />
+          </div>
+          <div className="product-details">
+            <img src="/images/taco_textboard_full.png" alt="" />
+          </div>
+          <div className="product-details-cloud">
+            <img src="/images/taco_cloud.png" alt="" />
+          </div>
+        </div>
+      ) : productShow === 8 ? (
+        <div className="product-details-container">
+          <div className="product-image">
+            <img src="/images/pepper_bottle.png" alt="" />
+          </div>
+          <div className="product-details">
+            <img src="/images/pepper_textboard_full.png" alt="" />
+          </div>
+          <div className="product-details-cloud">
+            <img src="/images/pepper_cloud.png" alt="" />
+          </div>
+        </div>
+      ) : productShow === 9 ? (
+        <div className="product-details-container">
+          <div className="product-image">
+            <img src="/images/garlic_bottle.png" alt="" />
+          </div>
+          <div className="product-details">
+            <img src="/images/garlic_textboard_full.png" alt="" />
+          </div>
+          <div className="product-details-cloud">
+            <img src="/images/garlic_cloud.png" alt="" />
+          </div>
+        </div>
+      ) : productShow === 10 ? (
+        <div className="product-details-container">
+          <div className="product-image">
+            <img src="" alt="" />
+          </div>
+          <div className="product-details">
+            <img src="" alt="" />
+          </div>
+          <div className="product-details-cloud">
+            <img src="" alt="" />
+          </div>
+        </div>
+      ) : (
+        <>
+          <div className="family-top"></div>
+
+          <div className="family-top">
+            <div className="family-title">
+              <img src="/images/family_title.png" alt="" />
+            </div>
+            <div className="family-board">
+              <img src="/images/family_textboard.png" alt="" />
+            </div>
+          </div>
+        </>
       )}
+
       <div className="family-bottom">
         <div className="product-row">
           {products.map((product) => (
             <ProductRow
-              setProductSelected={setProductSelected}
-              position={product.position}
-              rowImage={product.productFamilyImage}
-              label={product.productLabel}
+              key={product._id}
+              product={product}
+              clickHandler={clickHandler}
             />
           ))}
         </div>
