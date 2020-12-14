@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import ProductDetails from "../components/ProductDetails";
 import ProductRow from "../components/ProductRow";
+import Swiper from "react-id-swiper";
+import "swiper/swiper-bundle.css";
 
 const products = [
   {
@@ -111,6 +113,22 @@ function OurFamily() {
   const clickHandler = (productID) => {
     setProductShow(productID);
     console.log(productShow);
+  };
+  const params = {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
   };
 
   return (
@@ -260,6 +278,37 @@ function OurFamily() {
             />
           ))}
         </div>
+        <div className="mobile-product-row">
+          <Swiper {...params}>
+            {products.map((product) => (
+              <div key={product._id}>
+                {" "}
+                <img
+                  onClick={() => clickHandler(product._id)}
+                  src={product.productFamilyImage}
+                  alt=""
+                />{" "}
+              </div>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* 
+        <div className="mobile-product-row">
+          <ReactCardCarousel autoplay={false}>
+            {products.map((product) => (
+              <div key={product._id} className="card-style">
+                <div
+                  className="details-image"
+                  onClick={() => clickHandler(product._id)}
+                >
+                  <img src={product.productFamilyImage} alt="" />
+                </div>
+              </div>
+            ))}
+          </ReactCardCarousel>
+        </div>
+        */}
       </div>
     </div>
   );
