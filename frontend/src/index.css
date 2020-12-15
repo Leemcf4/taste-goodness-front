@@ -352,3 +352,12 @@ code {
   border-radius: "10px";
   box-sizing: "border-box";
 }
+.swiper-container {
+  width: 425px;
+}
+.swiper-slide {
+  width: 80%;
+}
+.swiper-slide > img {
+  width: 100px;
+}

@@ -27,7 +27,7 @@ const CoverflowEffect = () => {
       </div>
       <div
         style={{
-          backgroundImage: product.productFamilyImage,
+          backgroundImage: `url(${require(product.productFamilyImage)})`,
         }}
       />
       <div

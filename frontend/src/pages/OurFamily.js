@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import ProductDetails from "../components/ProductDetails";
 import ProductRow from "../components/ProductRow";
 import Swiper from "react-id-swiper";
-import "swiper/swiper-bundle.css";
+import "swiper/css/swiper.css";
 
 const products = [
   {
@@ -115,19 +114,14 @@ function OurFamily() {
     console.log(productShow);
   };
   const params = {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
-    },
+    slidesPerView: 3,
+    spaceBetween: 30,
+    slidesPerGroup: 3,
+    loop: true,
+    loopFillGroupWithBlank: true,
     pagination: {
       el: ".swiper-pagination",
+      clickable: true,
     },
   };
 
