@@ -10,12 +10,14 @@ import Hive from "./pages/Hive";
 import CallUs from "./pages/CallUs";
 import OurFamily from "./pages/OurFamily";
 import ProductDetails from "./components/ProductDetails";
+import { Burger } from "./components/Burger";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <header>
+          <Burger />
           <Header />
         </header>
 

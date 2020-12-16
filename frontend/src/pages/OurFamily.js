@@ -114,13 +114,14 @@ function OurFamily() {
     console.log(productShow);
   };
   const params = {
-    slidesPerView: 3,
-    spaceBetween: 30,
+    slidesPerView: 4,
+    spaceBetween: 0,
     slidesPerGroup: 3,
+    centeredSlides: true,
+    freeMode: true,
     loop: true,
-    loopFillGroupWithBlank: true,
+    loopFillGroupWithBlank: false,
     pagination: {
-      el: ".swiper-pagination",
       clickable: true,
     },
   };
