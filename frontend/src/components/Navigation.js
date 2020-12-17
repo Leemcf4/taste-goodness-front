@@ -12,10 +12,53 @@ const variants = {
 };
 const itemIds = [0, 1, 2, 3, 4];
 
-export const Navigation = () => (
+const links = [
+  {
+    id: 0,
+    path: "/",
+    text: "HELLO!",
+  },
+  {
+    id: 1,
+    path: "/ourstory",
+    text: "OUR STORY",
+  },
+  {
+    id: 3,
+    path: "/whatsgood",
+    text: "WHATSGOOD",
+  },
+  {
+    id: 4,
+    path: "/ourfamily",
+    text: "OURFAMILY",
+  },
+  {
+    id: 5,
+    path: "/findus",
+    text: "WHERETOFINDUS",
+  },
+  {
+    id: 6,
+    path: "/hive",
+    text: "HIVE",
+  },
+  {
+    id: 7,
+    path: "/videos",
+    text: "VIDEOS",
+  },
+  {
+    id: 8,
+    path: "/callus",
+    text: "CALLUS",
+  },
+];
+
+export const Navigation = ({ toggle }) => (
   <motion.ul variants={variants}>
-    {itemIds.map((i) => (
-      <MenuItem i={i} key={i} />
+    {links.map((i) => (
+      <MenuItem i={i} key={i.id} path={i.path} text={i.text} onClick={toggle} />
     ))}
   </motion.ul>
 );
