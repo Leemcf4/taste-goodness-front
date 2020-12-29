@@ -10,7 +10,6 @@ const variants = {
     transition: { staggerChildren: 0.05, staggerDirection: -1 },
   },
 };
-const itemIds = [0, 1, 2, 3, 4];
 
 const links = [
   {
